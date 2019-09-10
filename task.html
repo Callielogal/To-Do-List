@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model="newTask">
+        <button @click="add">Ajouter</button>
+        <ul>
+            <li v-for="(task, index) in tasks">
+                <input type="checkbox" @click='done'>
+                {{task.title}}
+                <button @click="remove(index)">X</button>
+            </li>
+        </ul>
+
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        let app = new Vue({
+                    el: "#app",
+                    data: {
+                        tasks: [{
+                                title: 'Comprendre'
+                            },
+                            {
+                                title: 'Enfin essayer'
+                            }
+                        ],
+                        newTask: '',
+
+                    },
+                    methods: {
+                        add: function () {
+                            this.tasks.push({
+                                title: this.newTask
+                            })
+                            this.newTask = ""
+                        },
+
+                        remove: function (index) {
+
+                            this.tasks.splice(index, 1)
+                        },
+                        done: function () {
+                            if () {
+                               
+                            }
+                        }
+                    }
+                })
+</script>
+</body>
+</html>

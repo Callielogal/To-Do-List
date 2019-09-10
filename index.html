@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue - JS</title>
+    <style>
+        button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+
+        <!--         <h1 v-show="seen">Je s'appelle {{name}}</h1>
+        <a :href="link">
+          <img :src="img" alt="Groot"> 
+        </a>
+        <p v-if= "user">Vous avez les droits</p>
+        <p v-else= "user">Tu n'as pas le droit de voir ce message</p>-->
+
+       <!-- <a v-for="link in links" :href="link">{{link.text}} </br></a>
+        <button @click="cache">Disparaitre?</button>
+        <img :src="img" alt="Groot" v-show="seen"> -->
+        
+        <input type="checkbox" v-model="check">
+    <h1 v-show="check"> coucou</h1>
+        <input type="text" v-model="firstname">
+        <input type="text" v-model="lastname">
+
+        <h2> Tu t'appelles {{name}}</h2>
+
+
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        let app = new Vue({
+            el: '#app',
+            data: {
+               // name: 'Groot',
+                //   link:'https://www.youtube.com/watch?v=3YiIxopZKpY',
+                //   img: 'groot.jpg'
+                //   seen: 'true',
+                //   user: 'true'    
+               //    img: 'groot.jpg',
+               check: false,
+
+               firstname: 'Callie',
+               lastname: 'Galway'
+            },
+            computed:{
+                name: function(){
+                    return this.firstname.toUpperCase()+' '+this.lastname.toUpperCase();
+                }
+            }
+         
+        })
+    </script>
+
+</body>
+
+</html>
