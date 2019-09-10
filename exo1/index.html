@@ -27,12 +27,13 @@
         <button @click="cache">Disparaitre?</button>
         <img :src="img" alt="Groot" v-show="seen"> -->
         
-        <input type="checkbox" v-model="check">
+      <!--  <input type="checkbox" v-model="check">
     <h1 v-show="check"> coucou</h1>
         <input type="text" v-model="firstname">
         <input type="text" v-model="lastname">
 
-        <h2> Tu t'appelles {{name}}</h2>
+        <h2> Tu t'appelles {{name}}</h2> -->
+
 
 
 
@@ -50,15 +51,15 @@
                 //   seen: 'true',
                 //   user: 'true'    
                //    img: 'groot.jpg',
-               check: false,
+             //  check: false,
 
-               firstname: 'Callie',
-               lastname: 'Galway'
+              // firstname: 'Callie',
+               //lastname: 'Galway'
             },
             computed:{
-                name: function(){
-                    return this.firstname.toUpperCase()+' '+this.lastname.toUpperCase();
-                }
+               // name: function(){
+                 //   return this.firstname.toUpperCase()+' '+this.lastname.toUpperCase();
+               // }
             }
          
         })

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exo Component</title>
+
+    <style>
+    .hey{
+        background-color: red;
+        width: 30vw;
+        margin: auto;
+        margin-top: 10px; 
+        height:10vh;
+    }
+    </style>
+</head>
+<body>
+<div id="app">
+
+    <div class="container">
+        <hey></hey>
+        <hey></hey>
+        <hey></hey>
+        <hey></hey>
+
+
+
+    </div>
+
+
+
+
+
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+    
+    Vue.component('hey',{
+    template: `<div class="hey" role="alert">
+                Hey
+                </div>`
+        })
+    let app = new Vue({
+        el: '#app'
+    })
+
+
+    </script>
+
+</body>
+</html>
