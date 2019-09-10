@@ -8,7 +8,7 @@
     <title>Exo Component</title>
 
     <style>
-        .hey {
+        .info {
             background-color: red;
             width: 30vw;
             margin: auto;
@@ -17,6 +17,25 @@
             text-align: center;
             font-size: 40px;
         }
+        .cool{
+            width: 30vw;
+            margin: auto;
+            margin-top: 10px;
+            height: 10vh;
+            text-align: center;
+            font-size: 40px;
+        }
+        .success{
+            background-color:blue;
+            width: 30vw;
+            margin: auto;
+            margin-top: 10px;
+            height: 10vh;
+            text-align: center;
+            font-size: 40px;
+            color:white;
+
+        }
     </style>
 </head>
 
@@ -24,10 +43,9 @@
     <div id="app">
 
         <div class="container">
-            <hey></hey>
-            <hey></hey>
-            <hey></hey>
-            <hey></hey>
+            <hey message="Hey c'est une alert" type="info"></hey>
+            <hey message="J'ai réussi" type="cool"></hey>
+            <hey message="Et c'est cool" type="success"></hey>
         </div>
 
     </div>
@@ -37,9 +55,12 @@
 
     <script>
         Vue.component('hey', {
-            template: `<div class="hey" role="alert">
-                Hey
-                </div>`
+            template: `<div :class="type" role="alert">
+                {{message}}
+                </div>`,
+            
+            props: ['message' ,'type']
+
         })
         let app = new Vue({
             el: '#app'
